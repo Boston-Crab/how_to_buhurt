@@ -1,3 +1,4 @@
+/* -- GLOBALS -- */
 h1 {
   font-family: monospace;
   color: rgb(190, 188, 188);
@@ -19,11 +20,15 @@ body {
   background-color: black;
   margin: 0;
 }
+/* -- GLOBALS - END -- */
 
-.main_page_information {
+/* -- BAKCGROUNDS -- */
+.main_page_background {
   background-color: black;
 }
+/* -- BAKCGROUNDS - END -- */
 
+/* -- TEXTS -- */
 .title_texts {
   font-family: monospace;
   font-weight: bold;
@@ -38,18 +43,63 @@ body {
 }
 
 .text_video_discription {
+  font-family: monospace;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 14px;
+  letter-spacing: -1px;
+  word-spacing: -3px;
   margin: 0;
 }
+/* -- TEXTS -END -- */
 
+/* -- ALIGNMENTS -- */
 .alignment_center {
   text-align: center;
   align-items: center;
   align-content: center;
 }
+/* -- ALIGNMENTS - END -- */
 
-#video_margin_reduction {
+/* -- MARGINS -- */
+#imbeded_video_margin_reduction {
   margin-bottom: -10px;
   padding-bottom: 0px;
+}
+/* -- MARGINS - END -- */
+
+/* -- PADDINGS -- */
+#padding_test {
+  padding-right: 550px;
+}
+/* -- PADDING - END -- */
+
+/* -- FLEXBOX -- */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 700px;
+  justify-content: normal;
+  align-items: normal;
+  align-content: normal;
+}
+
+.flex-items:nth-child(1) {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+}
+/* -- FLEXBOX - END -- */
+
+.max_page_width {
+  max-width: 700px;
+  margin: auto;
+}
+
+.test_resire {
+  width: 100%;
+  height: auto;
 }
