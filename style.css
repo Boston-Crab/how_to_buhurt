@@ -56,7 +56,7 @@ a:active {
   font-size: 14px;
   letter-spacing: -1px;
   word-spacing: -3px;
-  margin: 0;
+  margin-top: 2px;
 }
 
 .text_underline {
@@ -69,6 +69,10 @@ a:active {
 
 .text_warning {
   font-size: 14px;
+}
+
+.text_first_letter_space::first-letter {
+  padding-left: 25px;
 }
 /* -- TEXTS -END -- */
 
