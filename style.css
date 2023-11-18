@@ -12,12 +12,9 @@ header {
   padding: 10px;
 }
 
-p {
-  color: white;
-}
-
 body {
   background-color: black;
+  color: white;
   margin: 0;
 }
 
@@ -28,10 +25,15 @@ a:active {
 }
 /* -- GLOBALS - END -- */
 
-/* -- BAKCGROUNDS -- */
-.main_page_background {
-  background-color: black;
+/* -- DARK/LIGHT MODES -- */
+.light_mode {
+  background-color: white;
+  color: black;
 }
+/* -- DARK/LIGHT MODES - END -- */
+
+/* -- BAKCGROUNDS -- */
+
 /* -- BAKCGROUNDS - END -- */
 
 /* -- TEXTS -- */
@@ -164,7 +166,7 @@ a:active {
 /* -- BUTTONS -- */
 .button_page_end_style {
   transition: 0.2s;
-  background-color: white;
+  background-color: gold;
   border: none;
   color: black;
   font-weight: bold;
@@ -178,8 +180,8 @@ a:active {
 
 .button_page_end_style:hover {
   transition: 0.2s;
-  padding-left: 34px;
-  padding-right: 34px;
+  padding-left: 54px;
+  padding-right: 54px;
   margin-left: 12px;
   margin-right: 12px;
 }

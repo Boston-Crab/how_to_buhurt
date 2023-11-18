@@ -12,6 +12,10 @@
       <h1>How To - Buhurt</h1>
     </header>
     <section class="max_page_width main_page_background">
+      <!-- Light Mode button-->
+      <button onclick="myFunction()" class="button_page_end_style">
+        Toggle Light Mode
+      </button>
       <!-- Page title: -->
       <p class="text_title align_center">WHAT IS MODERN BUHURT?</p>
       <!--Youtube video about Buhurt:-->
@@ -67,7 +71,7 @@
       </section>
       <!-- Buttons to other pages -->
       <section class="flex_container">
-        <div class="flex-items:nth-child(1)">
+        <div class="flex-items:nth-child(1) align_center">
           <a
             href="https://www.google.com/"
             target="_blank"
@@ -81,19 +85,25 @@
             target="_blank"
             class="anchor_decoration"
           >
-            <button class="button_page_end_style">LINK TO HMB RULES</button>
+            <button class="button_page_end_style">LINK TO HMB</button>
           </a>
 
           <a
-            href="https://www.armoredcombatsports.com/wp-content/uploads/2020/02/IMCF_Rules_2020.pdf"
+            href="https://imcfederation.org"
             target="_blank"
             class="anchor_decoration"
           >
-            <button class="button_page_end_style">LINK TO IMCF RULES</button>
+            <button class="button_page_end_style">LINK TO IMCF</button>
           </a>
         </div>
       </section>
     </section>
     <footer></footer>
+    <script>
+      function myFunction() {
+        var element = document.body;
+        element.classList.toggle("light_mode");
+      }
+    </script>
   </body>
 </html>
