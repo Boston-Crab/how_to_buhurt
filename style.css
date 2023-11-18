@@ -62,6 +62,14 @@ a:active {
 .text_underline {
   text-decoration: underline;
 }
+
+.text_bold {
+  font-weight: bold;
+}
+
+.text_warning {
+  font-size: 14px;
+}
 /* -- TEXTS -END -- */
 
 /* -- ALIGNMENTS -- */
@@ -90,14 +98,34 @@ a:active {
   padding-bottom: 0px;
 }
 
-.margin_title_text {
+.margin_bottom_zero {
   margin-bottom: 0px;
+}
+
+.margin_top_zero {
+  margin-top: 0px;
+}
+
+.margin_left_zero {
+  margin-left: 0px;
+}
+
+.margin_right_zero {
+  margin-right: 0px;
+}
+
+.margin_zero {
+  margin: 0px;
+}
+
+.margin_bottom_ten {
+  margin-bottom: 10px;
 }
 /* -- MARGINS - END -- */
 
 /* -- PADDINGS -- */
-#padding_test {
-  padding-right: 550px;
+.padding_bottom_zero {
+  padding-bottom: 0px;
 }
 /* -- PADDING - END -- */
 
@@ -158,3 +186,17 @@ a:active {
   text-decoration: none;
 }
 /* -- ANCHORS - END -- */
+
+/* -- IMAGES -- */
+.img_size_generic {
+  width: 700px;
+  height: auto;
+  width: 100%;
+}
+/* -- IMAGES - END */
+
+/* -- VIDEO/iframe */
+.iframe_resize_generic {
+  width: 100%;
+}
+/* -- VIDEO/iframe - END -- */
