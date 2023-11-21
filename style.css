@@ -1,3 +1,7 @@
+:root {
+  --max-width: 700px;
+}
+
 /* -- GLOBALS -- */
 h1 {
   font-family: monospace;
@@ -16,6 +20,7 @@ body {
   background-color: black;
   color: white;
   margin: 0;
+  width: 100%;
 }
 
 a,
@@ -31,10 +36,6 @@ a:active {
   color: black;
 }
 /* -- DARK/LIGHT MODES - END -- */
-
-/* -- BAKCGROUNDS -- */
-
-/* -- BAKCGROUNDS - END -- */
 
 /* -- TEXTS -- */
 .text_title {
@@ -75,6 +76,13 @@ a:active {
 
 .text_first_letter_space::first-letter {
   padding-left: 25px;
+}
+
+.text_language {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 2px;
 }
 /* -- TEXTS -END -- */
 
@@ -136,24 +144,17 @@ a:active {
 /* -- PADDING - END -- */
 
 /* -- FLEXBOX -- */
-.flex-container {
+
+.flex_generic_container {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  width: 700px;
-  justify-content: normal;
-  align-items: normal;
-  align-content: normal;
 }
 
-.flex-items:nth-child(1) {
-  display: block;
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  align-self: auto;
-  order: 0;
+.flex_generic_box {
+  flex: 1;
+  text-align: center;
 }
+
 /* -- FLEXBOX - END -- */
 
 /* -- PAGE SIZE -- */
@@ -164,26 +165,24 @@ a:active {
 /* -- PAGE SIZE - END -- */
 
 /* -- BUTTONS -- */
-.button_page_end_style {
+.button_generic {
   transition: 0.2s;
   background-color: gold;
   border: none;
   color: black;
   font-weight: bold;
-  padding: 15px 32px;
-  margin: 10px;
+  padding: 1rem;
+  margin-top: 0.3rem;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
-.button_page_end_style:hover {
+.button_generic:hover {
   transition: 0.2s;
-  padding-left: 54px;
-  padding-right: 54px;
-  margin-left: 12px;
-  margin-right: 12px;
+  gap: 1rem;
+  background-color: rgb(202, 177, 35);
 }
 /* -- BUTTONS - END */
 

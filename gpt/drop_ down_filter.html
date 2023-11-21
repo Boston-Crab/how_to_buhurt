@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter Box with Dynamic Dropdowns</title>
+    <style>
+      /* Add some basic styles for demonstration purposes */
+      #filter-dropdowns {
+        margin-bottom: 10px;
+      }
+
+      .location-item {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Filter dropdowns -->
+    <div id="filter-dropdowns">
+      <!-- Country dropdown -->
+      <select id="countryDropdown" onchange="updateCityDropdown()">
+        <option value="">Select Country</option>
+        <option value="England">England</option>
+        <option value="Germany">Germany</option>
+      </select>
+
+      <!-- City dropdown -->
+      <select id="cityDropdown" style="display: none">
+        <option value="">Select City</option>
+        <!-- Options will be dynamically added based on the selected country -->
+      </select>
+    </div>
+
+    <!-- List of locations -->
+    <div id="location-box">
+      <!-- Sample data (replace this with your own data) -->
+      <div class="location-item" data-country="England" data-city="London">
+        Location: London, England
+      </div>
+      <div class="location-item" data-country="England" data-city="Portsmouth">
+        Location: Portsmouth, England
+      </div>
+      <div class="location-item" data-country="Germany" data-city="Berlin">
+        Location: Berlin, Germany
+      </div>
+      <div class="location-item" data-country="Germany" data-city="Cologne">
+        Location: Cologne, Germany
+      </div>
+      <!-- Add more locations as needed -->
+    </div>
+
+    <script>
+      // Sample data (replace this with your own data)
+      const citiesByCountry = {
+        England: ["London", "Portsmouth"],
+        Germany: ["Berlin", "Cologne"],
+      };
+
+      // Function to update the city dropdown based on the selected country
+      function updateCityDropdown() {
+        const countryDropdown = document.getElementById("countryDropdown");
+        const cityDropdown = document.getElementById("cityDropdown");
+        const selectedCountry = countryDropdown.value;
+
+        // Clear existing options
+        cityDropdown.innerHTML = '<option value="">Select City</option>';
+
+        // Show/hide the city dropdown based on the selected country
+        cityDropdown.style.display = selectedCountry ? "inline-block" : "none";
+
+        // Add options based on the selected country or show all cities if no country is selected
+        if (selectedCountry) {
+          citiesByCountry[selectedCountry].forEach((city) => {
+            const option = document.createElement("option");
+            option.value = city;
+            option.textContent = city;
+            cityDropdown.appendChild(option);
+          });
+        }
+      }
+
+      // Function to filter the list based on the selected country and city
+      function filterLocations() {
+        const countryDropdown = document.getElementById("countryDropdown");
+        const cityDropdown = document.getElementById("cityDropdown");
+        const locationBox = document.getElementById("location-box");
+        const items = locationBox.getElementsByClassName("location-item");
+
+        const selectedCountry = countryDropdown.value;
+        const selectedCity = cityDropdown.value;
+
+        // Iterate over each item and toggle visibility based on the selected country and city
+        for (const item of items) {
+          const country = item.getAttribute("data-country");
+          const city = item.getAttribute("data-city");
+
+          const showCountry =
+            selectedCountry === "" || country === selectedCountry;
+          const showCity = selectedCity === "" || city === selectedCity;
+
+          // Show items that match the selected country and city
+          item.style.display = showCountry && showCity ? "block" : "none";
+        }
+      }
+
+      // Attach event listeners
+      document
+        .getElementById("countryDropdown")
+        .addEventListener("change", function () {
+          updateCityDropdown();
+          filterLocations();
+        });
+
+      document
+        .getElementById("cityDropdown")
+        .addEventListener("change", function () {
+          filterLocations();
+        });
+    </script>
+  </body>
+</html>
