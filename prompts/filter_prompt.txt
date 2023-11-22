@@ -1,0 +1,3 @@
+javascript, how to make A-Box with listed items and a filter function with 2 drop down buttons (1st - country(england, germany), 2nd - city((london and portsmouth are only for england), (berlin and collogne are only for germany)). The 2nd drop down filter box only appears when the 1st filter has been choosen.
+
+Every item in the list is actually placed into a seperate flex-container which is inside A-Box. A-Box has limited size, so when there are too many items inside it, it will allow to scroll down, without effecting the rest of the website.
