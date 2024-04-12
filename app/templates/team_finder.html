@@ -1,0 +1,91 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Page title: -->
+<p class="text_title align_center">TEAMS AROUND THE WORLD</p>
+<!-- Banner image: -->
+<div class="">
+  <img
+    src="{{ url_for('static', filename='assets/imgs/team_finder_banner.png') }}"
+    alt="image of a team"
+    class="img_size_generic"
+  />
+</div>
+<!-- Texts about Team Finder page: -->
+<section>
+  <p class="text_title align_center margin_bottom_ten">
+    LIST OF TEAMS/CLUBS FILTERED BY COUNTRY
+  </p>
+  <p
+    class="text_video_description align_center margin_bottom_zero text_bold text_warning margin_top_zero"
+  >
+    If your team is not here, write me a message and I will add it.
+  </p>
+  <p
+    class="text_video_description align_center margin_top_zero text_bold text_warning"
+  >
+    Please send me Name, Location, Logo, Facebook / Instagram.
+  </p>
+</section>
+<!-- Team Finder feature: -->
+<section>
+  <!-- Filtering feature -->
+  <section>
+    <!-- Filtering drop-downs -->
+    <label for="countryFilter">Filter by Location:</label>
+    <form action="/team_finder" method="GET">
+      <select id="countryFilter" name="country">
+        <option value="">All Countries</option>
+        {% for country_tuple in countries %}
+            {% set country = country_tuple[0] %}
+            <option value="{{ country }}">{{ country }}</option>
+        {% endfor %}
+      </select>
+    
+      <input type="submit" value="Filter">
+    </form>
+  </section>
+  <!-- Container with data to be filtered -->
+  <section class="flex_generic_container">
+    <section class="scroll_box">
+      <div class="flex_generic_container test">
+        <section class="flex_generic_box">
+          <div class="flex_team_finder_item_container">
+          {% for name, country, city, website_1, website_2 in teams %}  
+            <section
+              class="flex_team_finder_box"
+              data-country="{{ country }}"
+              data-city="{{ city }}"
+            >
+              <h3>{{ country }}, {{ city }}</h3>
+              <img
+                src="{{ url_for('static', filename='assets/imgs/' + country + '.png') }}"
+                alt=""
+                width="100"
+                height="70"
+              />
+              <h3>{{ name }}</h3>
+              <p>-Links-</p>
+              <a
+                href="{{ website_1 }}"
+                target="_blank"
+                class="anchor_decoration"
+                ><button>-- Facebook --</button></a
+              >
+              <br />
+              <a
+                href="{{ website_2 }}"
+                target="_blank"
+                class="anchor_decoration"
+                ><button>-- Instagram --</button></a
+              >
+            </section>
+          {% endfor %}
+          </div>
+        </section>
+      </div>
+    </section>
+  </section>
+</section>
+{% endblock %}

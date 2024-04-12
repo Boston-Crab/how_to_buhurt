@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block content %}
+</div>
+<!-- Page title: -->
+<p class="text_title align_center">WHAT IS MODERN BUHURT?</p>
+<!--Youtube video about Buhurt:-->
+<section class="flex_generic_container">
+  <div class="flex_generic_box">
+    <!-- vw, vh -->
+    <iframe
+      width="700"
+      height="425"
+      src="https://www.youtube.com/embed/xYxQR5haqTs?start=228"
+      title="Battle of the Nations 2017 - Ukraine vs Russia final of 21vs21 of world championship"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      id="imbeded_video_margin_reduction"
+      class="iframe_resize_generic"
+    ></iframe>
+    <p class="text_video_discription align_right">Video by Buhurt Tech</p>
+  </div>
+</section>
+<!-- Texts about Buhurt and Safety: -->
+<section>
+  <p class="text_title margin_bottom_zero text_underline">
+    HOW BUHURT WORKS?
+  </p>
+  <p class="text_generic text_first_letter_space">
+    In short, modern Buhurt is a sport where teams of people fight against
+    each other (5vs5, 10vs10, 30vs30..) in full suits of medieval plate
+    armor and blunted weapons, until all of one teams fighters falls down
+    to the ground, gives up or the opposing team has a considerable
+    numerical advantage. The match lasts until one team wins atleast 2
+    rounds.
+  </p>
+
+  <p class="text_title margin_bottom_zero text_underline">SAFETY</p>
+  <p class="align_left text_generic text_first_letter_space">
+    Modern Buhurt equipment strikes a perfect balance between medieval
+    authenticity and modern protection. Medieval hand made armor provides
+    great mobility and protection, which is further more enchanced by
+    modern shock absorbing fome padding and great spine protection.
+    Aswell, every tournament has trained marshals who oversee each fight
+    for safety and rules following reasons.
+  </p>
+
+  <p class="text_title margin_bottom_zero text_underline">
+    ORGANIZERS/LEAGUES
+  </p>
+  <p class="text_generic text_first_letter_space">
+    The two main world wide leagues are <u>Buhurt League</u> (HMB rules
+    set) and <u>MCF</u> (Buhurt with defferent rules set). Links to them
+    are at the end of the page. You might want to check your local
+    communities for any extra organizers/tournaments.
+  </p>
+</section>
+<!-- Buttons to other websites -->
+<section class="flex_generic_container">
+  <div class="flex_generic_box">
+    <a
+      href="/team_finder"
+      target="_blank"
+      class="anchor_decoration"
+    >
+      <button class="button_generic">FIND A TEAM</button>
+    </a>
+
+    <a
+      href="https://hmbia.info/rules-and-regulations/"
+      target="_blank"
+      class="anchor_decoration"
+    >
+      <button class="button_generic">LINK TO HMB</button>
+    </a>
+
+    <a
+      href="https://imcfederation.org"
+      target="_blank"
+      class="anchor_decoration"
+    >
+      <button class="button_generic">LINK TO IMCF</button>
+    </a>
+  </div>
+</section>
+{% endblock %}

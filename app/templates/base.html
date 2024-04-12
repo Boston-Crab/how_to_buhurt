@@ -1,10 +1,11 @@
+<!-- Index/Main/Home page of the website -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
     <header>
@@ -19,39 +20,28 @@
             Toggle White Mode
           </button>
           <!-- Page Navigation: -->
-          <a href="./team_finder.html" class="anchor_decoration"
+          <a href="/team_finder" class="anchor_decoration"
             ><button class="button_generic">Team Finder</button></a
           >
 
-          <a href="./what_is_buhurt.html" class="anchor_decoration"
-            ><button class="button_generic">What Is Buhurt</button></a
+          <a href="/armor" class="anchor_decoration"
+            ><button class="button_generic">Armor</button></a
           >
 
-          <a href="./training.html" class="anchor_decoration"
+          <a href="/training" class="anchor_decoration"
             ><button class="button_generic">Training</button></a
           >
 
-          <a href="index.html" class="anchor_decoration"
+          <a href="/what_is_buhurt" class="anchor_decoration"
+            ><button class="button_generic">What Is Buhurt</button></a
+          >
+
+          <a href="/" class="anchor_decoration"
             ><button class="button_generic">Language</button></a
           >
         </div>
       </div>
-      <!-- Page title: -->
-      <p class="text_title align_center">
-        WHAT TO KNOW AND WHERE TO BUY ARMOR/GEAR
-      </p>
-      <!-- Banner image: -->
-      <div class="">
-        <img
-          src="assets/imgs/armor_page_banner.png"
-          alt="image of armor and weapons"
-          class="img_size_generic"
-        />
-      </div>
-      <!-- Texts about Armor page: -->
-      <section>
-        <p class="text_title align_center margin_bottom_ten">TEMPORARY TEXT</p>
-      </section>
+      {% block content %} {% endblock %}
     </section>
     <footer></footer>
     <script>

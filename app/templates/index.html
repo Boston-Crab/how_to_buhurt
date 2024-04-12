@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>How To - Buhurt</h1>
+    </header>
+    <section class="max_page_width main_page_background">
+        <!-- Page title: -->
+        <p class="text_title align_center">Press To Select</p>
+        <section class="flex_generic_container">
+            <div class="flex_generic_box">
+                <a href="/what_is_buhurt" class="anchor_decoration">
+                    <img src="{{ url_for('static', filename='assets/imgs/english_flag.png') }}" alt="english flag">
+                    <p class="text_language">ENGLISH</p>
+                </a>
+                <a href="/what_is_buhurt" class="anchor_decoration">
+                    <img src="{{ url_for('static', filename='assets/imgs/german_flag.png') }}" alt="Deutsche Flagge">
+                    <p class="text_language">DEUTSCH</p>
+                </a>
+            </div>
+        </section>
+    </section>
+    <footer></footer>
+</body>
+</html>
