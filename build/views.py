@@ -28,19 +28,6 @@ with conn.cursor() as cursor:
     """)
     conn.commit()
 
-with conn.cursor() as cursor:
-    cursor.execute("""
-        INSERT INTO teams (name, country, city, description, website_1, website_2)
-        VALUES 
-        ('Ruhrpott Knights', 'Germany', 'Duisburg', 'Meeting every weekend to fight in armor. Always driving to tournaments', 'https://www.google.com/', 'https://www.facebook.com/'),
-        ('Red Klux', 'Germany', 'Berlin', 'Friendly team that likes to participate.', 'https://www.youtube.com/', 'https://www.google.com/'),
-        ('Boys of Steel', 'England', 'London', 'Fight, fight, fight!', 'https://www.youtube.com/', 'https://www.google.com/'),
-        ('Raven Claw', 'England', 'Portsmouth', 'Dont hurt us, please, very, very, nicely', 'https://www.youtube.com/', 'https://www.google.com/')
-        ON CONFLICT (name, country, city) DO NOTHING
-    """)
-    conn.commit()
-
-
 
 @app.route("/")
 def index():
