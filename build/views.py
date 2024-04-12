@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request
-from app import app
+from build import app
 import psycopg2
 
 
-db_url = "postgres://buhurt_info_user:VT6haqJOmw27F8PCcMjOXU3AxnAIpiBi@dpg-cocm5ta0si5c73albsfg-a.frankfurt-postgres.render.com/buhurt_info"
+db_url = "postgres://buhurt_info_udmw_user:1EbxdmGwt5ykmSTp4JBxXMTRPWY5ysoA@dpg-cocml7a0si5c73alkjm0-a.frankfurt-postgres.render.com/buhurt_info_udmw"
 conn = psycopg2.connect(db_url)
 
 # conn = psycopg2.connect(
