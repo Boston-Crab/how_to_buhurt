@@ -56,12 +56,12 @@ def team_finder_page():
         with conn.cursor() as cursor:
             if selected_country:
                 cursor.execute(
-                    "SELECT name, country, city, website_1, website_2 FROM teams WHERE country = %s",
+                    "SELECT name, country, city, website_1, website_2, logo FROM teams WHERE country = %s",
                     (selected_country,)
                 )
             else:
                 cursor.execute(
-                    "SELECT name, country, city, website_1, website_2 FROM teams"
+                    "SELECT name, country, city, website_1, website_2, logo FROM teams"
                 )
             teams = cursor.fetchall()
     return render_template("team_finder.html", teams=teams, countries=countries)
