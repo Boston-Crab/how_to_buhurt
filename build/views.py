@@ -3,7 +3,7 @@ from build import app
 import psycopg2
 
 
-db_url = "postgres://buhurt_info_udmw_user:1EbxdmGwt5ykmSTp4JBxXMTRPWY5ysoA@dpg-cocml7a0si5c73alkjm0-a.frankfurt-postgres.render.com/buhurt_info_udmw"
+db_url = "postgres://buhurt_info_pspd_user:VspZDrSelmXCxbHXoP5fI7HNZ6xcfMne@dpg-cod2osi0si5c738ok3e0-a.frankfurt-postgres.render.com/buhurt_info_pspd"
 conn = psycopg2.connect(db_url)
 
 # conn = psycopg2.connect(
@@ -21,9 +21,9 @@ with conn.cursor() as cursor:
             name VARCHAR(100) NOT NULL,
             country VARCHAR(50) NOT NULL,
             city VARCHAR(100) NOT NULL,
-            description TEXT,
             website_1 VARCHAR(200),
-            website_2 VARCHAR(200)
+            website_2 VARCHAR(200),
+            logo VARCHAR(50)
         )
     """)
     conn.commit()

@@ -52,7 +52,7 @@
       <div class="flex_generic_container test">
         <section class="flex_generic_box">
           <div class="flex_team_finder_item_container">
-          {% for name, country, city, website_1, website_2 in teams %}  
+          {% for name, country, city, website_1, website_2, logo in teams %}  
             <section
               class="flex_team_finder_box"
               data-country="{{ country }}"
@@ -60,7 +60,7 @@
             >
               <h3>{{ country }}, {{ city }}</h3>
               <img
-                src="{{ url_for('static', filename='assets/imgs/' + country + '.png') }}"
+                src="{{ url_for('static', filename='assets/imgs/teams_logos/' + logo + '.jpg') }}"
                 alt=""
                 width="100"
                 height="70"
