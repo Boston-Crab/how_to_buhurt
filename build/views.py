@@ -64,6 +64,7 @@ def team_finder_page():
                     "SELECT name, country, city, website_1, website_2, logo FROM teams"
                 )
             teams = cursor.fetchall()
+    print(teams)
     return render_template("team_finder.html", teams=teams, countries=countries)
 
 @app.route("/armor")

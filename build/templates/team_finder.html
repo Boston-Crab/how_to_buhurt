@@ -71,15 +71,17 @@
                 href="{{ website_1 }}"
                 target="_blank"
                 class="anchor_decoration"
-                ><button>-- Facebook --</button></a
+                ><button>{% set website_type = website_1.split('https://')[-1].split('www.')[-1].split('.')[0] %}
+                  {{ website_type|capitalize }}</button></a
               >
               <br />
-              <a
-                href="{{ website_2 }}"
-                target="_blank"
-                class="anchor_decoration"
-                ><button>-- Instagram --</button></a
-              >
+              {% if website_2 is not none %}
+                  <br />
+                  <a href="{{ website_2 }}" target="_blank" class="anchor_decoration">
+                      <button>{% set website_type = website_2.split('https://')[-1].split('www.')[-1].split('.')[0] %}
+                        {{ website_type|capitalize }}</button>
+                  </a>
+              {% endif %}
             </section>
           {% endfor %}
           </div>
